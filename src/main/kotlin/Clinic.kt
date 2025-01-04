@@ -7,8 +7,6 @@ class Clinic(private val doctors: List<Doctor>) {
 
     /*factors that can affect the consultation time.*/
 
-    private var emergencies = 0
-    private var additionalTreatments = 0
     private var otherDelayFactors = 0
 
     init {
@@ -19,6 +17,10 @@ class Clinic(private val doctors: List<Doctor>) {
 
 
     fun calculateWaitingTime(patientPosition: Int): Int {
+        /*factors that can affect the consultation time.*/
+
+        var emergencies = 0
+        var additionalTreatments = 0
 
         if(patientPosition == 11) {
             additionalTreatments += 2
